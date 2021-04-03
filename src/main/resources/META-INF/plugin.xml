@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>com.c5inco.modifiers</id>
+    <name>Compose Desktop Template</name>
+    <vendor email="author@gmail.com" >Author</vendor>
+    <description><![CDATA[
+        Description of your plugin that must be at least 40 characters long
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow id="Compose Tool" icon="AllIcons.General.Modified" anchor="right"
+                    factoryClass="com.google.adux.template.plugin.MyToolWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.google.adux.template.PluginAction"
+                class="com.google.adux.template.plugin.PluginAction"
+                icon="PluginIcons.PlaygroundAction"
+                text="Compose Modifiers Playground">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
